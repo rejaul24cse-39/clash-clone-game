@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clash Clone Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="game-container">
+        <div id="hud">
+            <div class="resource">
+                <span class="resource-label">Gold:</span>
+                <span id="gold">1000</span>
+            </div>
+            <div class="resource">
+                <span class="resource-label">Elixir:</span>
+                <span id="elixir">1000</span>
+            </div>
+            <div class="resource">
+                <span class="resource-label">Troops:</span>
+                <span id="troop-count">10</span>
+            </div>
+        </div>
+        <canvas id="gameCanvas" width="800" height="600"></canvas>
+        <div id="controls">
+            <h3>Build Menu</h3>
+            <button class="build-btn" data-type="townhall">Town Hall (500G)</button>
+            <button class="build-btn" data-type="cannon">Cannon (300G)</button>
+            <button class="build-btn" data-type="archertower">Archer Tower (400G)</button>
+            <button class="build-btn" data-type="goldmine">Gold Mine (200G)</button>
+            <button class="build-btn" data-type="elixircollector">Elixir Collector (250G)</button>
+            <h3>Train Troops</h3>
+            <button class="train-btn" data-type="barbarian">Barbarian (50E)</button>
+            <button class="train-btn" data-type="archer">Archer (75E)</button>
+            <h3>Actions</h3>
+            <button id="attack-btn">Start Attack Mode</button>
+            <button id="reset-btn">Reset Game</button>
+        </div>
+    </div>
+    <div id="instructions">
+        <h2>How to Play</h2>
+        <ul>
+            <li><strong>Build:</strong> Click a building from the menu and place it on the map</li>
+            <li><strong>Resources:</strong> Gold mines and elixir collectors generate resources over time</li>
+            <li><strong>Defense:</strong> Build cannons and archer towers to defend your base</li>
+            <li><strong>Train:</strong> Use elixir to train barbarians and archers</li>
+            <li><strong>Attack:</strong> Click Attack Mode to deploy troops and attack buildings</li>
+            <li><strong>Objective:</strong> Build a strong base and train an army!</li>
+        </ul>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
